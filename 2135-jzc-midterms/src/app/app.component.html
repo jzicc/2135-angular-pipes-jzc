@@ -1,0 +1,41 @@
+<h2> App Demonstration</h2>
+
+<div> 
+  Today's date :- {{presentDate}} 
+</div>
+<div> 
+  Today's date :- {{presentDate | date}} 
+</div>
+<div>
+  This is a short date :- {{presentDate | date: 'shortDate' }} <br/>
+  This line shows the full date :- {{presentDate | date: 'fullDate' }} <br/>
+  This will show a formatted date:- {{presentDate | date: 'M/dd//yyyy'}} <br/>
+  This indicates the hours and minutes:- {{presentDate | date:'h;mm'}}
+  <h3> John Zacqueo Carreon</h3>
+</div>
+<div>
+   Date with uppercase :- {{presentDate | date: 'fulldate' | uppercase}} <br/>
+   Date with lowercase :- {{presentDate | date: 'medium' | lowercase}} <br/>
+</div>
+
+<div>
+  Seconds changing in Time: {{ todayO$ | async | date:'mediumTime' }}
+</div>
+
+<h3> Currency Pipe</h3>
+<p>{{ price | currency:'':true}}</p>
+<p>{{ price | currency:'INR' }}</p>
+
+<!-- <div>
+  <h3> Start index:- {{Fruits | slice:2}}</h3>
+  <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+  < <h5>Negative index:- {{Fruits | slice:-2}}</h5> -->
+  <!-- <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6> -->
+<!-- </div> -->
+
+<div style="text-align:center">
+<h3>Currency Pipe</h3>
+<p>Apply formatting:- {{decimalNum1 | number:'3.1'}} </p>
+<p> Apply formatting:- {{decimalNum2 | number:'2.1-4'}} </p>
+</div>
+<app-reactive></app-reactive>
